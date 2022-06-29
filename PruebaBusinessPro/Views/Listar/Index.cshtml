@@ -1,0 +1,30 @@
+﻿@using DBContext;
+@{ ViewData["Title"] = "Index"; }
+
+<h1 style="font-style: italic; font-family: 'Times New Roman', Times, serif; border-bottom: double">ARTICULOS ACTIVOS</h1>
+
+<table class="table table-dark table-striped" style="text-align:center; ">
+    <thead>
+        <tr>
+            <th></th>
+            <th scope="col">Codigo Articulo</th>
+            <th scope="col">Nombre Articulo</th>
+            <th scope="col">Costo</th>
+            <th scope="col">Codigo Proveedor</th>
+            <th scope="col">Nombre Proveedor</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (ListarArticulos art in ViewBag.Listar)
+        {
+<tr>
+    <th scope="row"></th>
+    <td>@art.CodigoArticulo</td>
+    <td>@art.NombreArticulo</td>
+    <td>₡@art.Costo</td>
+    <td>@art.CodigoProveedor</td>
+    <td>@art.Nombre</td>
+</tr>}
+
+    </tbody>
+</table>

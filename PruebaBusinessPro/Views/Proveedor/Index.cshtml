@@ -1,0 +1,42 @@
+﻿@using DBContext;
+@{ ViewData["Title"] = "Articulos"; }
+
+<h1 style="font-style: italic; font-family: 'Times New Roman', Times, serif; border-bottom: double" >PROVEEDOR</h1>
+<a class="btn btn-primary mb-3 float-right" asp-controller="Proveedor" asp-action="Añadir">Agregar</a>
+
+
+<table class="table table-dark table-striped" style="text-align:center">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Codigo</th>
+            <th scope="col">Nombre Proveedor</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Cedula</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Telefono</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Proveedor Prov in ViewBag.Prueba)
+        {
+        <tr>
+            <th scope="row">@Prov.IdProveedor</th>
+        <td>@Prov.CodigoProveedor</td>
+        <td>@Prov.Nombre</td>
+        <td>@Prov.Estado</td>
+        <td>@Prov.Cedula</td>
+        <td>@Prov.Direccion</td>
+        <td>@Prov.Telefono</td>
+
+        <td>
+            <a class="btn btn-primary" asp-controller="Proveedor" asp-action="Editar" asp-route-IdProveedor="@Prov.IdProveedor">Editar</a>
+            <a class="btn btn-danger" asp-controller="Proveedor" asp-action="Eliminar" asp-route-IdProveedor_param="@Prov.IdProveedor">Eliminar</a>
+        </td>
+
+        </tr>}
+
+    </tbody>
+</table>
+
+

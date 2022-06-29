@@ -1,0 +1,69 @@
+﻿@using DBContext
+@model Articulos
+@{ ViewData["Title"] = "Actualizar Articulo"; }
+
+<h1>@ViewData["Title"]</h1>
+
+@if (!ViewData.ModelState.IsValid)
+{
+<div class="alert alert-danger">
+    Favor revisar la informacion solicitada
+</div>}
+
+<div class="row">
+    <div class="col-6">
+        <form method="post" autocomplete="off">
+
+            <div class="form-group">
+                <label for="IdArticulo">ID</label>
+                <input asp-for="IdArticulo" class="form-control" value="@Model.IdArticulo" readonly="readonly" />
+                <span asp-validation-for="IdArticulo" class="text-danger small"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="CodigoArticulo">Codigo</label>
+                <input asp-for="CodigoArticulo" class="form-control" value="@Model.CodigoArticulo" />
+                <span asp-validation-for="CodigoArticulo" class="text-danger small"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="NombreArticulo">Nombre Articulo</label>
+                <input asp-for="NombreArticulo" class="form-control" value="@Model.NombreArticulo" />
+                <span asp-validation-for="NombreArticulo" class="text-danger small"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Estado:</label>
+
+                <select asp-for="EstadoActivo" class="form-control">
+                    <option value="">Seleccione</option>
+                    <option value="Activo">Activo</option>
+                    <option value="Inactivo">Inactivo</option>
+
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="CostoArticulo">Costo</label>
+                <input asp-for="Costo" class="form-control" value="@Model.Costo" />
+                <span asp-validation-for="Costo" class="text-danger small"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="IdProveedor">Proveedor</label>
+                <select asp-for="IdProveedor" class="form-control" asp-items="@(new SelectList(ViewBag.Prueba, "IdProveedor", "Nombre", "Seleccione"))">
+                    <option>Seleccione</option>
+                </select>
+                <span asp-validation-for="IdProveedor" class="text-danger small"></span>
+            </div>
+
+
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <a asp-controller="Articulos" asp-action="Index" class="btn btn-secondary">Regresar</a>
+            </div>
+
+        </form>
+    </div>
+</div>

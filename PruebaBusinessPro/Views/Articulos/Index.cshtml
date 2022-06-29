@@ -1,0 +1,40 @@
+﻿@using DBContext;
+@{ ViewData["Title"] = "Index"; }
+
+<h1 style="font-style: italic; font-family: 'Times New Roman', Times, serif; border-bottom: double">ARTICULOS</h1>
+<a class="btn btn-primary mb-3 float-right" asp-controller="Articulos" asp-action="Añadir">Agregar</a>
+
+
+<table class="table table-dark table-striped" style="text-align:center; ">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Codigo</th>
+            <th scope="col">Nombre Articulo</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Costo</th>
+            <th scope="col">Proveedor</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Articulos art in ViewBag.Prueba)
+        {
+<tr>
+    <th scope="row">@art.IdArticulo</th>
+    <td>@art.CodigoArticulo</td>
+    <td>@art.NombreArticulo</td>
+    <td>@art.EstadoActivo</td>
+    <td>₡@art.Costo</td>
+    <td>@art.Proveedor.Nombre</td>
+
+    <td>
+        <a class="btn btn-primary" asp-controller="Articulos" asp-action="Editar" asp-route-IdArticulo_param="@art.IdArticulo">Editar</a>
+        <a class="btn btn-danger" asp-controller="Articulos" asp-action="Eliminar" asp-route-IdArticulo_param="@art.IdArticulo">Eliminar</a>
+    </td>
+
+</tr>}
+
+    </tbody>
+</table>
+

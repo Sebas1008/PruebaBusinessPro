@@ -1,0 +1,13 @@
+C:\Users\50688\source\repos\PruebaBusinessPro\DBContext\bin\Debug\netcoreapp3.1\DBContext.deps.json
+C:\Users\50688\source\repos\PruebaBusinessPro\DBContext\bin\Debug\netcoreapp3.1\DBContext.runtimeconfig.json
+C:\Users\50688\source\repos\PruebaBusinessPro\DBContext\bin\Debug\netcoreapp3.1\DBContext.runtimeconfig.dev.json
+C:\Users\50688\source\repos\PruebaBusinessPro\DBContext\bin\Debug\netcoreapp3.1\DBContext.dll
+C:\Users\50688\source\repos\PruebaBusinessPro\DBContext\bin\Debug\netcoreapp3.1\DBContext.pdb
+C:\Users\50688\source\repos\PruebaBusinessPro\DBContext\obj\Debug\netcoreapp3.1\DBContext.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\50688\source\repos\PruebaBusinessPro\DBContext\obj\Debug\netcoreapp3.1\DBContext.AssemblyInfoInputs.cache
+C:\Users\50688\source\repos\PruebaBusinessPro\DBContext\obj\Debug\netcoreapp3.1\DBContext.AssemblyInfo.cs
+C:\Users\50688\source\repos\PruebaBusinessPro\DBContext\obj\Debug\netcoreapp3.1\DBContext.csproj.CoreCompileInputs.cache
+C:\Users\50688\source\repos\PruebaBusinessPro\DBContext\obj\Debug\netcoreapp3.1\DBContext.dll
+C:\Users\50688\source\repos\PruebaBusinessPro\DBContext\obj\Debug\netcoreapp3.1\DBContext.pdb
+C:\Users\50688\source\repos\PruebaBusinessPro\DBContext\obj\Debug\netcoreapp3.1\DBContext.genruntimeconfig.cache
+C:\Users\50688\source\repos\PruebaBusinessPro\DBContext\obj\Debug\netcoreapp3.1\DBContext.csproj.AssemblyReference.cache
